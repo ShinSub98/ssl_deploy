@@ -82,6 +82,10 @@ WSGI_APPLICATION = 'ssl_project.wsgi.application'
 #     }
 # }
 
+import pymysql
+
+pymysql.install_as_MySQLdb()
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql', 
