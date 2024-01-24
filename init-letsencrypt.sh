@@ -5,7 +5,7 @@ if ! [ -x "$(command -v docker-compose)" ]; then
   exit 1
 fi
 
-domains=(hufsub.shop www.hufsub.shop)
+domains=(hufsub.shop)
 rsa_key_size=4096
 data_path="./data/certbot"
 email="wjdtjq26@naver.com" # Adding a valid address is strongly recommended
