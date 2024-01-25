@@ -22,10 +22,7 @@ from rest_framework.response import Response
 
 class Init(APIView):
     def get(self, request):
-        res = {
-            "성공" :"했다"
-        }
-        return Response(res)
+        return Response("안녕하세요")
 
 
 urlpatterns = [
