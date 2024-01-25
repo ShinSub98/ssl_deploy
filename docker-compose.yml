@@ -4,7 +4,11 @@ services:
     image: ssl/server
     container_name: web
     restart: always
-    command: ["gunicorn", "ssl_project.wsgi:application", "-b", "0.0.0.0:8000"]
+    # command: ["gunicorn", "ssl_project.wsgi:application", "-b", "0.0.0.0:8000"]
+    command: bash -c "
+      python manage.py makemigrations
+      && python manage.py migrate
+      && gunicorn ssl_project.wsgi:application -b 0.0.0.0:8000"
     ports:
       - "8000:8000"
     volumes:
