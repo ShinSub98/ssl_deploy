@@ -4,6 +4,7 @@ ENV PYTHONUNBUFFERED 1
 
 RUN apt-get -y update
 RUN apt-get -y install vim
+run apt-get install netcat
 
 RUN mkdir /app
 ADD . /app
