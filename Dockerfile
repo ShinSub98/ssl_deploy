@@ -3,8 +3,7 @@ FROM python:3.10.7
 ENV PYTHONUNBUFFERED 1
 
 RUN apt-get -y update
-RUN apt-get -y install vim
-run apt-get -y install netcat
+RUN apt-get -y install vim netcat
 
 RUN mkdir /app
 ADD . /app
